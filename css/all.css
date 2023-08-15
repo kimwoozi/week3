@@ -306,6 +306,14 @@ a{
     max-width: 306px;
     margin-bottom: 80px;
 }
+.product-list img{
+    /* 需要爆框效果 不加overflow: hidden */
+    transform:scale(1,1);transition: all 1s ease-out;
+}
+.product-list img:hover{
+    opacity: 0.8;
+    transform:scale(1.1,1.1);
+}
 .product-info{
     display: flex;
     justify-content: space-between;
