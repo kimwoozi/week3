@@ -1,0 +1,371 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+body {
+    font-family: "Roboto", "Noto Sans TC", serif;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    /* 1296+24 把padding左右12px加回來 */
+    max-width: 1320px;
+    margin: 0 auto;
+    /* 左右留白12px=24px */
+    padding: 0 12px;
+    /*以下設定參考助教*/
+    /* 平板 */
+    @media (max-width:992px) {
+        max-width: 720px;
+    }
+    /*手機*/
+    @media (max-width:767px) {
+        max-width: 373px;
+    }
+}
+.container-fluid{
+    max-width: 1320px;
+    margin: 0 auto;
+    /* 平板 */
+    @media (max-width:992px) {
+        max-width: 720px;
+    }
+    /*手機*/
+    @media (max-width:767px) {
+        max-width: 373px;
+    }
+}
+.bg-color{
+    background-color: #AA0601;
+    color: #FFF;
+}
+.navbar-wrap{
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        /* column 換行 
+        移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+      }
+}
+.nav{
+    padding: 16px 0;
+    @media (max-width: 768px) {
+        padding-bottom: 0;
+        /* li設置白線後會發現有上一行設定的padding
+        上下16px，這裡不需要下方16px */
+    }
+}
+.nav-logo{
+    width: 80px;
+    @media (max-width: 768px) {
+        margin: 0 0 16px 16px;
+        /* 上右下左 ， 下左推出16px */
+    }
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        /* 將navbar-item設定成換行 */
+    }
+}
+.navbar-item{
+    height: 100%;
+    /* 滿版寬度為100%，後面平板50%、手機也同50% */
+    @media (max-width: 768px) {
+        width: 50%;
+        border: 1px solid #ffffff;
+        margin-right: 0px;
+    }
+}
+.nav-link{
+    font-size: 20px;
+    color: #FFF;
+    display: block;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    @media (max-width: 768px){
+        font-size: 16px;
+        padding: 12px 0;
+        justify-content: center;
+    }
+}
+.hover:hover{
+    opacity: 0.8;
+}
+.navbar-item:last-child .nav-link{
+    padding-right: 0;
+}
+/* ---navbar--- */
+.df{
+    display: flex;
+}
+.jc-sb{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fbar-list{
+    font-size: 16px;
+    /* padding-right: 48px; */
+    color: #FFF;
+}
+.fbar li:not(:last-child){
+    padding-right: 48px;
+}
+.fbar{
+    padding-bottom: 45px;
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+
+.address span{
+    font-size: 36px;
+    color: #FFF;
+    padding-right: 20px;
+    @media (max-width: 768px){
+        font-size: 18px;
+        padding-right: 10px;
+    }
+}
+.address a{
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    color: #FFF;
+    @media (max-width: 768px){
+        font-size: 16px;
+    }
+}
+.address a:not(:last-child){
+    padding-bottom: 8px;
+}
+
+
+.footer-icon img{
+    width: 48px;
+    @media (max-width: 992px){
+        width: 40px;
+    }
+    @media (max-width: 768px){
+        width: 24px;
+    }
+
+}
+.footer-icon li:not(:last-child){
+    padding-right: 32px;
+}
+.footer-info{
+    padding-top: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #FFFFFF;
+    @media (max-width: 768px){
+    padding: 24px 0;       
+    }
+}
+.copyright{
+    padding: 32px 0;
+    @media (max-width: 768px){
+        flex-direction: column;
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+}
+.terms{
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
+}
+.terms a{
+    color:#FFF;
+    font-size: 14px;
+    @media (max-width: 768px){
+        font-size: 16px;
+    }
+}
+.terms a:not(:last-child){
+    padding-right: 48px;
+}
+.pb-8-mob{
+    @media (max-width: 768px){
+        padding-bottom: 8px;
+    }
+}
+
+/* ================ */
+.subnav{
+    padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+}
+.submenu{
+    display: flex;
+    justify-content: center;
+    @media (max-width: 992px){
+      
+    }
+}
+.submenu li{
+    border: 1px solid #DCDCDC;
+    width: 432px;
+    text-align: center;
+    padding: 24px 0;
+    @media (max-width: 992px){
+        font-size: 24px;  
+        padding: 16px 0; 
+    }
+
+}
+.submenu li:first-child {
+    border-bottom: 8px solid #AA0601;
+    padding-bottom: 16px;
+}
+.submenu a{
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    @media (max-width: 992px){
+        font-size: 24px;   
+    }
+    @media (max-width: 768px){
+        font-size: 16px;   
+    }
+}
+/* ================ */
+
+.banner-img{
+    width: 50%;
+    height: 296px;
+    @media (max-width: 768px){
+        height: 136px;  
+    }
+}
+.banner-left{
+    background: url("/img/product-header-1.png") no-repeat center center / cover;
+    @media (max-width: 992px){
+        font-size: 24px;   
+        background: url("/img/product-header-sm-1.png") no-repeat center center / cover;
+    }
+}
+.banner-right{
+    background: url("/img/product-header-2.png") no-repeat center center / cover;
+    @media (max-width: 992px){
+        font-size: 24px;   
+        background: url("/img/product-header-sm-2.png") no-repeat center center / cover;
+    }
+}
+
+/* ========title========= */
+.product{
+    margin: 80px 0;
+}
+.product-title{
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    margin-bottom: 32px;
+}
+.pro-title-h2{
+    font-size: 42px;
+    @media (max-width: 768px){
+        font-size: 24px; 
+    }
+}
+.pro-title-h3{
+    font-size: 32px;
+    @media (max-width: 768px){
+        font-size: 24px; 
+    }
+}
+/* ============= */
+.pro-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pro-content:last-child ul{
+    padding-right: 24px;
+}
+.product-list{
+    max-width: 306px;
+    margin-bottom: 80px;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+}
+.product-info{
+    font-size: 24px;
+    font-weight: bold;
+}
+.pro-name{
+    color: #000;
+}
+.pro-price{
+    color: #AA0601;
+}
+.color-brown{
+    width: 24px;
+    height: 24px;
+    background-color: #5F3E2D ;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.color-red{
+    width: 24px;
+    height: 24px;
+    background-color: #B75929;
+    border-radius: 4px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li a {
+    font-size: 19px;
+    padding: 12px 16px;
+    color: #555555;
+    text-align: center;
+    display: flex;
+    border: 1px solid #555555;
+}
+
+/*
+因為設計稿的手機版padding太不一致了，
+就沒有依照設計稿的padding直接統一寫 padding: 12px 16px;
+文字大小也直接照19px設定。
+想請問助教在這邊會怎麼去設定文字大小不同 padding也不同的情況，謝謝。
+ .pagination li:first-child a{
+    padding: 11px 12px;
+    font-size: 19px;
+}
+.pagination li:last-child a{
+    padding: 11px 12px;
+    font-size: 19px;
+} */
+
+.pagination li a.active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.pagination li a:hover:not(.active) {
+    background-color: #F2F2F2;
+}
